@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookingApp">
+  
+<!-- Mirrored from www.kaayalcounty.com/bookingApp/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2016 04:05:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Bobby Jose">
+    <link rel="icon" type="image/png" href="../static/images/Brand/peppernation-logo.png">
+    <title>peppernation</title>
+
+
+  </head>
+
+  <body role="document">
+	<div ui-view="navBar" class="container-fluid"></div>
+	<state-change></state-change>
+	<div class="container-fluid" role="main"  style="padding-left:0;padding-right:0;min-height:350px;">
+		<div ui-view="container" class="container-fluid" style="padding-left:0;padding-right:0;" autoscroll='true'></div>
+    </div> <!-- /container -->
+
+	<footer style="padding-top:20px;background-color:#f5f5f0;">
+		<div class="container-fluid" style="padding-right:0px;padding-left:0px;">
+			<div class="rows col-lg-12" style="font-size:14px;">
+				<div class="col-lg-5" style="padding-top:20px;" id="footerAbtUs">
+					<h4><strong>ABOUT US</strong></h4>
+					<p>
+						<b style="font-family:rockwell"><span style="color:green;">pepper</span>nation.in</b> is a web platform that connects you, our customer with tourism ventures in Kerala and viscinity. We operate from Kochi, a town close to most of the popular tourist destinations. Learn more about <a ui-sref="root.aboutUs">what we do</a> or drop us <a ui-sref="root.contact">a line</a>.
+					</p>
+				</div>
+				<div class="col-lg-3" style="padding-top:20px;" id="footerInformative">
+					<h4><strong>INFORMATIVE</strong></h4>
+					<a ui-sref="root.aboutKerala">ABOUT KERALA</a><br>
+					<a ui-sref="root.aboutHouseboats">KETTUVALLOM - THE HOUSEBOAT OF KERALA</a><br>
+					<a ui-sref="root.aboutBackwaters">BACKWATERS OF KERALA</a>
+				</div>
+				<div class="col-lg-4" style="padding-top:20px;" id="footerLinks">
+					<h4><strong>LINKS</strong></h4>
+					<a ui-sref="root.home">SEARCH HOUSEBOAT CRUISES</a><br>
+					<a ui-sref="root.contact">CONTACT US</a><br>
+					<a ui-sref="root.viewBookingDetails">VIEW BOOKING DETAILS</a><br>
+					<a ui-sref="root.login">ASSOCIATE LOGIN</a>
+				</div>
+			</div>
+			<hr>
+			<div class="rows col-lg-12" style="padding-top:20px;">
+				<div class="container" align="center">
+					<a href="http://www.facebook.com/"><i class="fa fa-facebook-square fa-2x"></i></a>
+					<a href="http://twitter.com/"><i class="fa fa-twitter-square fa-2x"></i></a>					
+				</div>
+			</div>			
+			<hr>
+			<div class="rows col-lg-12"style="padding-top:20px;padding-bottom:20px;font-size:10px;" id="footerTnC">
+				<p class="text-center"><a ui-sref="root.tnc">Terms & Conditions</a>  2015-16 &copy; Kaayal Technologies - All rights reserved</p>
+			</div>
+		</div>
+	</footer>
+
+	<style>	
+		.css-form.ng-submitted input.ng-invalid{
+			border:1px solid #f00;
+		}
+		
+		.css-form.ng-submitted textarea.ng-invalid{
+			border:1px solid #f00;
+		}
+	</style>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <!--script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script-->
+    
+	<!--JQuery-->
+	<script src='../static/bower_components/jquery/dist/jquery.min.js'></script>
+    	
+	<!-- Bootstrap core CSS -->
+    <link href='../static/bower_components/bootstrap/dist/css/bootstrap.min.css' rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href='../static/bower_components/bootstrap/dist/css/bootstrap-theme.min.css' rel="stylesheet">
+			
+    <!-- Custom styles for this template-->
+    <link href='../static/bookingApp/css/theme.css' rel="stylesheet"> 
+	<script src='../static/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+	<script src='../static/bower_components/angular/angular.min.js'></script>
+	<script src='../static/bower_components/angular-route/angular-route.min.js'></script>
+	<script src='../static/bower_components/angular-animate/angular-animate.min.js'></script>
+	<script src='../static/bower_components/angular-resource/angular-resource.min.js'></script>
+	<script src='../static/bower_components/angular-touch/angular-touch.min.js'></script>	
+	<script src='../static/bower_components/angular-cookies/angular-cookies.min.js'></script>	
+	<script src='../static/bower_components/angular-sanitize/angular-sanitize.min.js'></script>	
+	<script src='../static/bower_components/angular-ui-router/release/angular-ui-router.min.js'></script>	
+	<script src='../static/bundle/bundle.js'></script>
+
+    <!-- Customized date picker plugin that support color coding of availability -->
+<!--
+	<script src='/static/bookingApp/js/ui-bootstrap-tpls.js'></script>
+	<script src='/static/bookingApp/js/services.js'></script>
+	<script src='/static/bookingApp/app.js'></script>
+	<script src='/static/bookingApp/navBar/navBar.js'></script>
+	<script src='/static/bookingApp/contactUs/contactUs.js'></script>
+	<script src='/static/bookingApp/login/login.js'></script>
+	<script src='/static/bookingApp/logout/logout.js'></script>
+	<script src='/static/bookingApp/welcome/welcome.js'></script>
+	<script src='/static/bookingApp/welcome/welcomeHB.js'></script>
+	<script src='/static/bookingApp/welcome/welcomeHS.js'></script>
+	<script src='/static/bookingApp/showBookings/showBookings.js'></script>
+	<script src='/static/bookingApp/viewBookingDetails/viewBookingDetails.js'></script>
+	<script src='/static/bookingApp/search/search.js'></script>
+	<script src='/static/bookingApp/aboutKerala/aboutKerala.js'></script>
+	<script src='/static/bookingApp/aboutUs/aboutUs.js'></script>
+	<script src='/static/bookingApp/aboutHouseboats/aboutHouseboats.js'></script>
+	<script src='/static/bookingApp/aboutBackwaters/aboutBackwaters.js'></script>
+	<script src='/static/bookingApp/listingDetails/listingDetails.js'></script>
+	<script src='/static/bookingApp/listingDetails/availability-widget.js'></script>
+	<script src='/static/bookingApp/listingReview/listingReview.js'></script>
+	<script src='/static/bookingApp/bookListing/book.js'></script>
+	<script src='/static/bookingApp/availabilityConsole/availabilityConsole.js'></script>
+	<script src='/static/bookingApp/tnc/tnc.js'></script>
+-->
+	
+    <!-- djangoAuth for authorisation-->
+	<!--
+	<script src='/static/bookingApp/js/djangoAuth.js'></script>
+	-->
+	<link href='../static/bower_components/fontawesome/css/font-awesome.min.css' rel="stylesheet">
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</body>
+
+<!-- Mirrored from www.kaayalcounty.com/bookingApp/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Apr 2016 04:05:16 GMT -->
+</html>
